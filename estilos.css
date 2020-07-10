@@ -92,14 +92,22 @@ header{
     background-image: -webkit-linear-gradient(left, var(--color-primario-LimeGreen), var(--color-primario-BrightCyan));
     color: var(--color-neutral-White);
 }
+.header__boton-movil{
+    display: none;
+}
 
 /* ESTILOS DE LLAS SECCIONES PRINCIPALES */
 .principal{    
     overflow: hidden;
+    background-image: url(./images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: 650%;
+    background-position-y: -270px;
 }
 .principal__bienvenidos{
     margin: 0 auto;
     max-width: 1100px;
+    height: 690px;
     display: flex;
 }
 .principal__bienvenidos-texto{
@@ -133,19 +141,10 @@ header{
 }
 .principal__bienvenidos-images{
     flex: 1.7;
-    height: 600px;
-    position: relative;
 }
-.principal__bienvenidos-images img:nth-child(1){
-    width: 1131px;
-    position: absolute;
-    top: -250px;
-}
-.principal__bienvenidos-images img:nth-child(2){
+.principal__bienvenidos-images img{
     width: 780px;
-    position: absolute;
-    top: -115px;
-    right: -250px;
+    transform: translate(30%, -12%);
 }
 
 /* ESTILOS DE LOS BENEFICIOS */
@@ -338,11 +337,22 @@ footer{
 }
 
 @media screen and (max-width: 375px){
+    .header{
+        max-width: 320px;
+    }
     .header__menu{
         display: none;
     }
     .header__boton{
         display: none;
+    }
+    .header__boton-movil{
+        width: 30px;
+        display: flex;
+        align-items: center;
+    }
+    .header__boton-movil img{
+        width: 100%;
     }
     footer{
         display: none;
