@@ -112,14 +112,13 @@ header{
     display: flex;
 }
 .principal__bienvenidos-texto{
-    min-width: 30%;
+    min-width: 40%;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .principal__bienvenidos-texto h2{
-    font-weight: 300;
     font-size: 3rem;
     font-weight: 400;
     color: var(--color-primario-DarkBlue);
@@ -145,7 +144,7 @@ header{
 }
 .principal__bienvenidos-images img{
     width: 780px;
-    transform: translate(30%, -12%);
+    transform: translate(17%, -12%);
 }
 
 /* ESTILOS DE LOS BENEFICIOS */
@@ -442,7 +441,7 @@ footer{
         --ancho: 950px;
     }
     .principal{
-        background-position-x: 0px;
+        background-position-x: 400px;
     }
     .principal__articulos-master{
         flex-wrap: wrap;
@@ -450,5 +449,14 @@ footer{
     }
     .principal__articulos-card{
         margin: 0 10px 20px 10px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    :root{
+        --ancho: 700px;
+    }
+    .principal__articulos h5{
+        text-align: center;
     }
 }
